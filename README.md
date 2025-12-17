@@ -187,5 +187,7 @@ LM2 may generate less fluent text if smoothing is too strong
 
 These behaviors are expected and discussed in the report
 
+Thanks!
+
 
 ```
