@@ -20,8 +20,8 @@ tri = build_ngrams(train, 3)
 four= build_ngrams(train, 4)
 
 # Models
-lm1 = BackoffLM(uni, bi, tri, four)
-lm2 = InterpolationLM(
+lm1 = BackoffLM(uni, bi, tri, four) # Backoff LM with 4-grams
+lm2 = InterpolationLM(   # Interpolation LM with 4-grams
     uni, bi, tri, four,
     lambdas=[0.4, 0.3, 0.2, 0.1],
     k=1,

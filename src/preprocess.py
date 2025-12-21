@@ -1,10 +1,15 @@
 import random
 from collections import Counter
+import nltk
+from nltk.tokenize import word_tokenize
+
+# Download punkt_tab if not already
+nltk.download('punkt_tab', quiet=True)
 
 def load_corpus(path):
     with open(path, "r", encoding="utf-8") as f:
-        text = f.read().lower()
-    return text.split()
+        text = f.read().lower()  # Lowercase for consistency
+    return word_tokenize(text)
 
 def split_data(tokens):
     random.shuffle(tokens)
