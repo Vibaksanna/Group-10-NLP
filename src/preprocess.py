@@ -12,7 +12,8 @@ def load_corpus(path):
     return word_tokenize(text)
 
 def split_data(tokens):
-    random.shuffle(tokens)
+    random.shuffle(tokens) # mean to shuffle the data before splitting
+    # example split: 70% train, 10% valid, 20% test
     n = len(tokens)
 
     train = tokens[:int(0.7 * n)]
